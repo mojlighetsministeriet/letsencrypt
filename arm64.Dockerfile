@@ -1,5 +1,5 @@
 # Run the build
-FROM mojlighetsministeriet/go-polymer-faster-build
+FROM mickaelguene/arm64-debian
 ENV WORKDIR /go/src/github.com/mojlighetsministeriet/letsencrypt
 COPY . $WORKDIR
 WORKDIR $WORKDIR
