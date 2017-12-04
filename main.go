@@ -20,7 +20,7 @@ func registerCertificateForIfNew(domainName string) (err error) {
 		return
 	}
 
-	cmd := exec.Command("certbot", "certonly", "--webroot", "-w /var/www", "-d "+domainName)
+	cmd := exec.Command("certbot", "certonly", "--webroot", "-w", "/var/www", "-d", domainName)
 	err = cmd.Run()
 
 	return
