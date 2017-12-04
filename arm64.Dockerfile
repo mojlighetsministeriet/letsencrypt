@@ -3,6 +3,8 @@ FROM mickaelguene/arm64-debian
 ENV WORKDIR /go/src/github.com/mojlighetsministeriet/letsencrypt
 COPY . $WORKDIR
 WORKDIR $WORKDIR
+RUN apt update -y
+RUN apt install -y golang
 RUN go get -t -v ./...
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=arm64 go build
 
